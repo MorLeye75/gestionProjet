@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Liste des Départements</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+    <h1>Liste des Départements</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nom</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="departement : ${departements}">
+                <td th:text="${departement.id}">ID</td>
+                <td th:text="${departement.name}">Nom</td>
+                <td th:text="${departement.description}">Description</td>
+            </tr>
+        </tbody>
+    </table>
+</html>

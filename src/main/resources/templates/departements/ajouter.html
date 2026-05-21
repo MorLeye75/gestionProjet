@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Ajouter un Département</title>
+</head>
+<body>
+    <h1>Ajouter un Département</h1>
+
+    <form th:action="@{/departements/ajouter}" th:object="${departementDTO}" method="post">
+        <label for="nom">Nom :</label>
+        <input type="text" id="nom" th:field="*{nom}" required/><br><br>
+
+        <label for="description">Description :</label>
+        <textarea id="description" th:field="*{description}" required></textarea><br><br>
+
+        <button type="submit">Ajouter</button>
+    </form>
+</body>
+</html>
